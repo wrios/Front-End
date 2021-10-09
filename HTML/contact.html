@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <meta charset="UTF-8">
         <title>Comercio</title>
     <link 
         rel="stylesheet" 
@@ -63,15 +64,15 @@
         </nav>
         <h1>Formulario</h1>
     </header>
-    Ingrese nombre de mascota: <input type="text" id="mascota">
-    <button id="btn" type="submit" onclick="clic()">Enviar</button>
-<form action="Link" method="POST" target="_blank">
-        <label for="firstname">Nombre:</label><input type="text" name="Nombre" placeholder="Ingrese su nombre"><br>
-        <label for="lastname">Apellido:</label><input type="text" name="Apellido" placeholder="Ingrese su apellido"><br>
-        <label for="street:">Dirección:</label><input type="text" name="address" placeholder="Ingrese su Dirección"><br>
-        <label for="city:">Ciudad:</label><input type="text" name="city" placeholder="Ingrese su Ciudad"><br>
-        <label for="zipcode:">Código postal:</label><input type="text" name="zipcode" placeholder="Ingrese su Código postal"><br>
-        <label for="BirthDate:">Fecha de Nacimiento (mm/dd/yyyy):</label><input type="date" name="birthDate"><br>
+    
+<form>
+        <label for="nombre">Nombre:</label><input type="text" name="nombre" placeholder="Ingrese su nombre"><br>
+        <label for="apellido">Apellido:</label><input type="apellido"  name="apellido" placeholder="Ingrese su apellido"><br>
+        <label for="dir:">Dirección:</label><input type="text" name="dir" placeholder="Ingrese su Dirección"><br>
+        <label for="email:">Email:</label><input type="text" name="email" placeholder="Ingrese su Correo"><br>
+        <label for="ciudad:">Ciudad:</label><input type="text" name="ciudad" placeholder="Ingrese su Ciudad"><br>
+        <label for="codpos:">Código postal:</label><input type="text" name="codpos" placeholder="Ingrese su Código postal"><br>
+        <label for="BirthDate:">Fecha de Nacimiento (mm/dd/yyyy):</label><input type="date" id="fecha" name="birthDate"><br>
     <p> Género:</p>
         <input type="radio" name="gender" value="hombre">Hombre
         <input type="radio" name="gender" value="mujer">Mujer
@@ -86,9 +87,10 @@
     </p>    
     Comentarios:
     <input type="textArea">
-    <input id="btn" type="submit" value="Enviar"">
+    <input id="formulario" type="button" value="Enviar" onclick="validarForm(this.form)">
     <input type="reset" value="reset">
 </form>
+<div id="error"></div>
 <footer>
     <a class="redsoc">
         <i class="fab fa-twitter"></i>
